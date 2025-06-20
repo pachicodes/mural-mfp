@@ -22,62 +22,14 @@
                 </div>
                 <div class="empty-state" id="emptyState" style="display: none;">
                     <div class="empty-icon">💡</div>
-                    <h3>Nenhuma dica encontrada</h3>
-                    <p>Seja a primeira a compartilhar uma dica ou aprendizado!</p>
+                    <h3>Nenhuma dica encontrada</h3>                    <p>Adicione sua dica editando o arquivo script.js!</p>
                 </div>
             </section>
         </div>
     </main>
 
-    <!-- Modal para adicionar nova dica -->
-    <div class="modal-overlay" id="modalOverlay" style="display: none;">
-        <div class="modal">
-            <div class="modal-header">
-                <h3>Compartilhe sua Dica ou Aprendizado</h3>
-                <button class="modal-close" id="modalClose">&times;</button>
-            </div>
-            <form class="tip-form" id="tipForm">
-                <div class="form-group">
-                    <label for="tipTitle">Título da Dica</label>
-                    <input type="text" id="tipTitle" name="title" required 
-                           placeholder="Ex: Como debuggar mais eficientemente">
-                </div>
-
-                <div class="form-group">
-                    <label for="tipCategory">Categoria</label>                    <select id="tipCategory" name="category" required>
-                        <option value="">Selecione uma categoria</option>
-                        <option value="tecnica">Técnica</option>
-                        <option value="mindset">Mindset</option>
-                        <option value="estrategia">Estratégia</option>
-                        <option value="experiencia">Experiência</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="tipContent">Conteúdo</label>
-                    <textarea id="tipContent" name="content" required rows="6" 
-                              placeholder="Compartilhe sua dica ou aprendizado em detalhes..."></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="tipTags">Tags (opcional)</label>                    <input type="text" id="tipTags" name="tags" 
-                           placeholder="algoritmos, dp, grafos (separadas por vírgula)">
-                </div>
-
-                <div class="form-group">
-                    <label for="tipAuthor">Seu nome/nickname</label>
-                    <input type="text" id="tipAuthor" name="author" required 
-                           placeholder="Como você gostaria de ser identificada?">
-                </div>
-
-                <div class="form-actions">
-                    <button type="button" class="btn-cancel" id="btnCancel">Cancelar</button>                    <button type="submit" class="btn-submit">Compartilhar Dica</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <footer class="footer">        <div class="container">
+    <footer class="footer">
+        <div class="container">
             <p>&copy; 2025 Mural MFP - Feito com 💜 para a Maratona Feminina de Programação</p>
         </div>
     </footer>
