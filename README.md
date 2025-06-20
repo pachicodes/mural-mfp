@@ -1,14 +1,24 @@
 # 💜 Mural de Dicas MFP
 
-Um mural colaborativo para a **Maratona Feminina de Programação (MFP)** onde participantes podem compartilhar dicas, aprendizados e experiências sobre programação competitiva.
+Um mural colaborativo para a **Maratona Feminina de Programação (MFP)** onde participantes aprendem contribuições open source na prática e criam um legado de conhecimento para futuras maratonas.
 
-## 🎯 Objetivo
+## 🎯 Duplo Propósito
 
-Criar um espaço acolhedor onde mulheres e pessoas não-binárias possam:
-- Compartilhar dicas técnicas sobre algoritmos e implementação
-- Trocar estratégias de estudo e preparação
-- Dividir experiências e aprendizados pessoais
-- Construir uma comunidade de apoio mútuo
+### 🎓 **Ferramenta Educativa (Workshop Open Source)**
+- Ensinar Git e GitHub através de contribuições reais
+- Praticar o fluxo completo: Fork → Branch → Commit → Pull Request
+- Aprender boas práticas de desenvolvimento colaborativo
+- Experiência hands-on com projetos open source
+
+### � **Legado Comunitário (Banco de Conhecimento)**
+- Criar um repositório permanente de dicas e aprendizados
+- Beneficiar futuras participantes da MFP
+- Construir memória coletiva da comunidade
+- Fortalecer a rede de apoio entre mulheres programadoras
+
+## 👩‍🏫 Workshop by Pachi Parra
+
+Este projeto faz parte de um workshop prático onde as estudantes aprendem a contribuir com open source adicionando seus próprios cards de dicas ao mural. Cada contribuição não só ensina Git/GitHub, mas também deixa algo valioso para a comunidade.
 
 ## ✨ Funcionalidades
 
@@ -44,27 +54,60 @@ Criar um espaço acolhedor onde mulheres e pessoas não-binárias possam:
 - ✅ **Moderno** - Gradientes, sombras e animações suaves
 - ✅ **Intuitivo** - Interface familiar e fácil de usar
 
-## 🚀 Como Usar
+## 🚀 Como Contribuir (Para Estudantes do Workshop)
 
-### Instalação
-1. Clone ou baixe o projeto
-2. Abra o arquivo `index.html` em qualquer navegador moderno
-3. Pronto! Não requer servidor ou instalações adicionais
+### 📋 **Passo a Passo - Sua Primeira Contribuição Open Source**
 
-### Adicionando Dicas
-1. Clique no botão **"+ Adicionar Dica"** no header
-2. Preencha o formulário com:
-   - **Título**: Resumo da sua dica
-   - **Categoria**: Escolha entre Técnica, Mindset, Estratégia ou Experiência
-   - **Conteúdo**: Detalhe sua dica ou aprendizado
-   - **Tags**: Palavras-chave separadas por vírgula (opcional)
-   - **Nome/Nickname**: Como você gostaria de ser identificada
-3. Clique em **"Compartilhar Dica"**
+#### 1️⃣ **Fork e Clone**
+```bash
+# 1. Clique em "Fork" neste repositório no GitHub
+# 2. Clone SEU fork (não o original):
+git clone https://github.com/SEU-USUARIO/mural-mfp.git
+cd mural-mfp
+```
 
-### Explorando Dicas
-- **Filtrar**: Use os botões de categoria para ver dicas específicas
-- **Buscar**: Digite no campo de busca para encontrar dicas por palavras-chave
-- **Navegar**: Role pela página para ver todas as dicas
+#### 2️⃣ **Criar Branch**
+```bash
+# Sempre trabalhe em uma branch separada:
+git checkout -b adiciona-dica-SEU-NOME
+# Exemplo: git checkout -b adiciona-dica-maria
+```
+
+#### 3️⃣ **Adicionar Sua Dica**
+- Abra `index.html` no navegador
+- Clique em **"+ Contribuir"**
+- Preencha o formulário com sua dica
+- Sua dica será salva automaticamente
+
+#### 4️⃣ **Commit e Push**
+```bash
+# Verificar o que mudou:
+git status
+
+# Adicionar mudanças:
+git add .
+
+# Commit com mensagem descritiva:
+git commit -m "Adiciona dica sobre debugging por Maria"
+
+# Enviar para SEU fork:
+git push origin adiciona-dica-SEU-NOME
+```
+
+#### 5️⃣ **Abrir Pull Request**
+1. Vá para SEU fork no GitHub
+2. Clique em **"Compare & pull request"**
+3. Escreva uma descrição clara da sua contribuição
+4. Clique em **"Create pull request"**
+
+🎉 **Parabéns! Você fez sua primeira contribuição open source!**
+
+### ❗ **Regras Importantes**
+- ✅ **Uma dica por Pull Request** - facilita a revisão
+- ✅ **Branch descritiva** - use seu nome na branch
+- ✅ **Commit claro** - explique o que você adicionou
+- ✅ **Teste antes** - verifique se sua dica aparece corretamente
+- ✅ **Seja respeitosa** - mantenha um tom colaborativo
 
 ## 📁 Estrutura do Projeto
 
@@ -109,24 +152,51 @@ mural-mfp/
   - Event handling moderno
   - Template literals
 
-## 🔮 Próximas Funcionalidades
+## ⭐ Para Futuras Maratonas
 
-### Versão 2.0 (Planejada)
-- [ ] **Backend**: Integração com API para persistência real
-- [ ] **Autenticação**: Sistema de login/cadastro
-- [ ] **Curtidas**: Sistema de votação nas dicas
-- [ ] **Comentários**: Discussões em cada dica
-- [ ] **Perfis**: Páginas de perfil das usuárias
-- [ ] **Moderação**: Sistema de aprovação de conteúdo
+Este mural crescerá a cada workshop e maratona! 
 
-### Versão 2.1 (Futura)
-- [ ] **PWA**: Funcionalidades offline
-- [ ] **Notificações**: Push notifications para novas dicas
-- [ ] **Exportar**: Download de dicas em PDF
-- [ ] **Temas**: Modo escuro e outras variações
-- [ ] **Analytics**: Estatísticas de uso e engajamento
+### 🔄 **Ciclo de Contribuições**
+1. **Workshop atual**: Estudantes aprendem Git contribuindo com dicas
+2. **Maratonas futuras**: Novas participantes se beneficiam das dicas
+3. **Próximos workshops**: Mais turmas adicionam conhecimento
+4. **Crescimento contínuo**: Banco de conhecimento sempre evoluindo
 
-## 🤝 Como Contribuir
+### 📚 **Tipos de Dicas Bem-vindas**
+- **Técnicas**: Algoritmos, estruturas de dados, debugging
+- **Git/GitHub**: Comandos úteis, fluxos de trabalho
+- **Open Source**: Como encontrar projetos, primeiras contribuições
+- **Experiências**: Primeiras maratonas, superação de desafios
+- **Estratégias**: Gestão de tempo, preparação para competições
+
+### 🌟 **Seu Legado**
+Cada dica adicionada:
+- ✨ Ajuda outras programadoras
+- 🚀 Ensina sobre open source na prática  
+- 💜 Fortalece a comunidade MFP
+- 📈 Constrói seu portfólio GitHub
+
+---
+
+## 🛠️ Informações Técnicas
+
+## 🤝 Para Instrutoras e Mentoras
+
+### 📖 **Como Usar no Workshop**
+1. **Preparação**: Clone o repo e teste todas as funcionalidades
+2. **Demonstração**: Mostre o fluxo completo de contribuição
+3. **Prática guiada**: Ajude cada estudante no seu primeiro PR
+4. **Code review**: Revisite os PRs e dê feedback construtivo
+
+### 💡 **Dicas para o Workshop**
+- Explique a diferença entre fork e clone
+- Enfatize a importância de mensagens de commit claras
+- Mostre como resolver conflitos simples
+- Incentive colaboração entre as participantes
+
+---
+
+## 🤝 Como Contribuir (Para Mentoras)
 
 1. **Fork** o projeto
 2. Crie uma **branch** para sua feature (`git checkout -b feature/nova-feature`)
