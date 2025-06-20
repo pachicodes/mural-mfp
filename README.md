@@ -10,22 +10,20 @@ Um mural colaborativo para a **Maratona Feminina de Programação (MFP)** que ex
 
 ## 🚀 Como Contribuir
 
-1. Abra o arquivo `index.html` no seu editor.
-2. Localize a `<div class="tips-grid">` dentro de `<section class="tips-feed">`.
-3. Copie o bloco de template comentado:
+1. Faça **fork** deste repositório no GitHub.
+2. Abra o seu fork no **GitHub Codespaces**.
+3. No Codespaces, abra `index.html` e localize `<div class="tips-grid">`.
+4. Copie o template comentado, cole abaixo e **adicione sua dica**:
 
    ```html
-   <!--
    <article class="tip-card">
-       <div class="tip-content">Escreva sua dica aqui...</div>
+       <div class="tip-content">Sua dica aqui...</div>
        <div class="tip-author">Por: Seu Nome</div>
    </article>
-   -->
    ```
 
-4. Cole abaixo dos exemplos existentes, preencha `tip-content` e `tip-author`.
-5. Salve o arquivo e recarregue a página no navegador para ver seu post-it.
-6. Faça commit das suas mudanças e abra um Pull Request para compartilhar sua dica!
+5. Realize **commit** das alterações e **push** para o seu fork.
+6. No GitHub, **crie um Pull Request (PR)** apontando para o repositório original.
 
 ## 📁 Estrutura do Projeto
 
