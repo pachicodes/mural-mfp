@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 :root {
     /* Paleta de cores MFP */
     --roxo-primario: #8B2CAB;
@@ -40,10 +42,10 @@
 }
 
 body {
-    font-family: var(--fonte-principal);
+    font-family: 'Indie Flower', cursive;
     line-height: 1.6;
     color: var(--cinza-escuro);
-    background: linear-gradient(135deg, var(--lilas-claro) 0%, var(--branco) 100%);
+    background: #D2B48C; /* cor de cortiça */
     min-height: 100vh;
 }
 
@@ -201,16 +203,19 @@ body {
 .tips-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: var(--espacamento-xl);
+    gap: var(--espacamento-xxl) var(--espacamento-lg);
 }
 
 .tip-card {
-    background: var(--branco);
+    background: #fff176; /* amarelo claro */
     border-radius: var(--border-radius-lg);
     padding: var(--espacamento-xl);
-    box-shadow: var(--sombra-leve);
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     border-left: 4px solid var(--roxo-primario);
+    font-family: 'Indie Flower', cursive;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
 }
 
 .tip-card:hover {
@@ -447,6 +452,25 @@ body {
     background: var(--roxo-secundario);
     transform: translateY(-1px);
 }
+
+/* Estilo Post-it para as dicas */
+.tip-card {
+    background: #fff176; /* amarelo claro */
+    border-radius: var(--border-radius-lg);
+    padding: var(--espacamento-xl);
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--roxo-primario);
+    font-family: 'Indie Flower', cursive;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+}
+
+/* Variedades de cor e rotação */
+.tips-grid > .tip-card:nth-child(4n+1) { background: #fff176; transform: rotate(-3deg); }
+.tips-grid > .tip-card:nth-child(4n+2) { background: #f8bbd0; transform: rotate(2deg); }
+.tips-grid > .tip-card:nth-child(4n+3) { background: #bbdefb; transform: rotate(-1deg); }
+.tips-grid > .tip-card:nth-child(4n+4) { background: #c8e6c9; transform: rotate(4deg); }
 
 /* Footer */
 .footer {
