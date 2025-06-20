@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural de Dicas MFP - Maratona Feminina de Programação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <span class="logo-text">Mural MFP</span>
+                <span class="logo-subtitle">Dicas e Aprendizados</span>
+            </h1>
+            <nav class="nav">
+                <button class="btn-add-tip" id="btnAddTip">
+                    <span>+</span> Adicionar Dica
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Seção de filtros -->
+            <section class="filters">
+                <h2>Explore as Dicas</h2>
+                <div class="filter-options">
+                    <button class="filter-btn active" data-category="all">Todas</button>
+                    <button class="filter-btn" data-category="tecnica">Técnica</button>
+                    <button class="filter-btn" data-category="mindset">Mindset</button>
+                    <button class="filter-btn" data-category="estrategia">Estratégia</button>
+                    <button class="filter-btn" data-category="experiencia">Experiência</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar dicas e aprendizados...">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                </div>
+            </section>
+
+            <!-- Feed de dicas -->
+            <section class="tips-feed" id="tipsFeed">
+                <div class="tips-grid">
+                    <!-- Dicas serão inseridas aqui via JavaScript -->
+                </div>
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <div class="empty-icon">💡</div>
+                    <h3>Nenhuma dica encontrada</h3>
+                    <p>Seja a primeira a compartilhar uma dica ou aprendizado!</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal para adicionar nova dica -->
+    <div class="modal-overlay" id="modalOverlay" style="display: none;">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Compartilhe sua Dica ou Aprendizado</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <form class="tip-form" id="tipForm">
+                <div class="form-group">
+                    <label for="tipTitle">Título da Dica</label>
+                    <input type="text" id="tipTitle" name="title" required 
+                           placeholder="Ex: Como debuggar mais eficientemente">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipCategory">Categoria</label>
+                    <select id="tipCategory" name="category" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="tecnica">Técnica</option>
+                        <option value="mindset">Mindset</option>
+                        <option value="estrategia">Estratégia</option>
+                        <option value="experiencia">Experiência</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipContent">Conteúdo</label>
+                    <textarea id="tipContent" name="content" required rows="6" 
+                              placeholder="Compartilhe sua dica ou aprendizado em detalhes..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipTags">Tags (opcional)</label>
+                    <input type="text" id="tipTags" name="tags" 
+                           placeholder="algoritmos, dp, grafos (separadas por vírgula)">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipAuthor">Seu nome/nickname</label>
+                    <input type="text" id="tipAuthor" name="author" required 
+                           placeholder="Como você gostaria de ser identificada?">
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" id="btnCancel">Cancelar</button>
+                    <button type="submit" class="btn-submit">Compartilhar Dica</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mural MFP - Feito com 💜 para a Maratona Feminina de Programação</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
