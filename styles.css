@@ -256,9 +256,14 @@ body {
 }
 
 .tip-date {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--cinza-escuro);
-    opacity: 0.7;
+    opacity: 0.8;
+    font-weight: 500;
+    background: var(--cinza-claro);
+    padding: var(--espacamento-xs) var(--espacamento-sm);
+    border-radius: var(--border-radius);
+    white-space: nowrap;
 }
 
 .tip-title {

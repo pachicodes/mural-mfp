@@ -108,8 +108,7 @@ class MuralMFP {
         // Mostrar feedback
         this.showNotification('Dica adicionada com sucesso! 🎉', 'success');
     }
-    
-    // Adicionar nova dica
+      // Adicionar nova dica
     addTip(tip) {
         this.tips.unshift(tip); // Adicionar no início
         this.saveTips();
@@ -124,13 +123,14 @@ class MuralMFP {
             .map(tag => tag.trim().toLowerCase())
             .filter(tag => tag.length > 0);
     }
-    
-    // Formatar data
+      // Formatar data
     formatDate(date) {
         return new Intl.DateTimeFormat('pt-BR', {
             day: '2-digit',
             month: '2-digit',
-            year: 'numeric'
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
         }).format(date);
     }
     
@@ -177,8 +177,7 @@ class MuralMFP {
             return categoryMatch && searchMatch;
         });
     }
-    
-    // Renderizar dicas
+      // Renderizar dicas
     renderTips() {
         const tipsGrid = document.querySelector('.tips-grid');
         const emptyState = document.getElementById('emptyState');
@@ -188,7 +187,9 @@ class MuralMFP {
             emptyState.style.display = 'block';
         } else {
             emptyState.style.display = 'none';
-            tipsGrid.innerHTML = this.filteredTips.map(tip => this.createTipCard(tip)).join('');
+            // Ordenar dicas por data (mais recentes primeiro)
+            const sortedTips = [...this.filteredTips].sort((a, b) => new Date(b.date) - new Date(a.date));
+            tipsGrid.innerHTML = sortedTips.map(tip => this.createTipCard(tip)).join('');
         }
     }
     
@@ -293,19 +294,20 @@ class MuralMFP {
         // Auto-remover
         setTimeout(removeNotification, 3000);
     }
-    
-    // Adicionar dicas de exemplo (apenas se não houver dicas salvas)
+      // Adicionar dicas de exemplo (apenas se não houver dicas salvas)
     addSampleTips() {
         if (this.tips.length === 0) {
-            const sampleTips = [                {
+            const now = new Date();
+            const sampleTips = [
+                {
                     id: 1,
                     title: "Use printf para debug eficiente",
                     category: "tecnica",
                     content: "Em vez de usar debuggers complexos, use printf estratégicos para entender o fluxo do seu código. Sempre remova os prints antes de submeter!",
                     tags: ["debug", "printf", "dica"],
                     author: "Ana Paula",
-                    date: new Date(Date.now() - 86400000).toISOString(),
-                    dateFormatted: this.formatDate(new Date(Date.now() - 86400000))
+                    date: new Date(now.getTime() - 86400000).toISOString(), // 1 dia atrás
+                    dateFormatted: this.formatDate(new Date(now.getTime() - 86400000))
                 },
                 {
                     id: 2,
@@ -314,8 +316,8 @@ class MuralMFP {
                     content: "Respire fundo, leia o problema duas vezes antes de começar a implementar. Se travar em um problema, passe para o próximo e volte depois. Tempo é precioso!",
                     tags: ["ansiedade", "gestao-tempo", "mindset"],
                     author: "Beatriz Santos",
-                    date: new Date(Date.now() - 172800000).toISOString(),
-                    dateFormatted: this.formatDate(new Date(Date.now() - 172800000))
+                    date: new Date(now.getTime() - 172800000).toISOString(), // 2 dias atrás
+                    dateFormatted: this.formatDate(new Date(now.getTime() - 172800000))
                 },
                 {
                     id: 3,
@@ -324,8 +326,8 @@ class MuralMFP {
                     content: "Sempre defina claramente os estados da DP antes de implementar. Escreva a recorrência no papel primeiro. Use memoização inicialmente, depois otimize se necessário.",
                     tags: ["dp", "programacao-dinamica", "template"],
                     author: "Carla Ferreira",
-                    date: new Date(Date.now() - 259200000).toISOString(),
-                    dateFormatted: this.formatDate(new Date(Date.now() - 259200000))
+                    date: new Date(now.getTime() - 259200000).toISOString(), // 3 dias atrás
+                    dateFormatted: this.formatDate(new Date(now.getTime() - 259200000))
                 },
                 {
                     id: 4,
@@ -334,8 +336,8 @@ class MuralMFP {
                     content: "Na minha primeira MFP eu estava super nervosa, mas o ambiente acolhedor das outras participantes me ajudou muito. Aprendi que não importa quantos problemas você resolve, o importante é participar e aprender!",
                     tags: ["primeira-vez", "nervosismo", "aprendizado"],
                     author: "Diana Costa",
-                    date: new Date(Date.now() - 345600000).toISOString(),
-                    dateFormatted: this.formatDate(new Date(Date.now() - 345600000))
+                    date: new Date(now.getTime() - 345600000).toISOString(), // 4 dias atrás
+                    dateFormatted: this.formatDate(new Date(now.getTime() - 345600000))
                 }
             ];
             
