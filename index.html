@@ -8,58 +8,26 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <h1 class="logo">
+        <div class="container">            <h1 class="logo">
                 <span class="logo-text">Mural MFP</span>
-                <span class="logo-subtitle">Workshop Open Source - Dicas e Aprendizados</span>
+                <span class="logo-subtitle">Dicas e Aprendizados</span>
             </h1>
-            <div class="workshop-info">
-                <span class="instructor">👩‍💻 Instrutora: Pachi Parra</span>
-                <span class="workshop-theme">🚀 Contribuindo com Open Source na Prática</span>
-            </div>
             <nav class="nav">
-                <button class="btn-tutorial" id="btnTutorial">
-                    📚 Tutorial Git
-                </button>
                 <button class="btn-add-tip" id="btnAddTip">
-                    <span>+</span> Contribuir
+                    <span>+</span> Adicionar Dica
                 </button>
             </nav>
         </div>
     </header>
 
-    <main class="main">
-        <div class="container">
-            <!-- Seção de filtros -->
-            <section class="workshop-intro">
-                <div class="workshop-card">
-                    <h2>🎯 Bem-vindas ao Workshop!</h2>
-                    <p><strong>Objetivo:</strong> Aprender na prática como contribuir com projetos open source usando Git e GitHub</p>
-                    <div class="learning-objectives">
-                        <h3>O que vamos aprender:</h3>
-                        <ul>
-                            <li>✅ Como fazer fork de um projeto</li>
-                            <li>✅ Criar branch para novas features</li>
-                            <li>✅ Fazer commits significativos</li>
-                            <li>✅ Abrir Pull Requests</li>
-                            <li>✅ Colaborar em projetos da comunidade</li>
-                        </ul>
-                    </div>
-                    <div class="workshop-actions">
-                        <button class="btn-primary" id="btnStartWorkshop">🚀 Começar Workshop</button>
-                        <button class="btn-secondary" id="btnGitCommands">📋 Comandos Git</button>
-                    </div>
-                </div>
-            </section>
-
+    <main class="main">        <div class="container">
             <!-- Seção de filtros -->
             <section class="filters">
-                <h2>Explore as Dicas</h2>
-                <div class="filter-options">
+                <h2>Explore as Dicas</h2>                <div class="filter-options">
                     <button class="filter-btn active" data-category="all">Todas</button>
-                    <button class="filter-btn" data-category="git">Git/GitHub</button>
-                    <button class="filter-btn" data-category="opensource">Open Source</button>
                     <button class="filter-btn" data-category="tecnica">Técnica</button>
+                    <button class="filter-btn" data-category="mindset">Mindset</button>
+                    <button class="filter-btn" data-category="estrategia">Estratégia</button>
                     <button class="filter-btn" data-category="experiencia">Experiência</button>
                 </div>
                 <div class="search-box">
@@ -97,12 +65,11 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="tipCategory">Categoria</label>
-                    <select id="tipCategory" name="category" required>
+                    <label for="tipCategory">Categoria</label>                    <select id="tipCategory" name="category" required>
                         <option value="">Selecione uma categoria</option>
-                        <option value="git">Git/GitHub</option>
-                        <option value="opensource">Open Source</option>
                         <option value="tecnica">Técnica</option>
+                        <option value="mindset">Mindset</option>
+                        <option value="estrategia">Estratégia</option>
                         <option value="experiencia">Experiência</option>
                     </select>
                 </div>
@@ -114,9 +81,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="tipTags">Tags (opcional)</label>
-                    <input type="text" id="tipTags" name="tags" 
-                           placeholder="git, github, pull-request, fork (separadas por vírgula)">
+                    <label for="tipTags">Tags (opcional)</label>                    <input type="text" id="tipTags" name="tags" 
+                           placeholder="algoritmos, dp, grafos (separadas por vírgula)">
                 </div>
 
                 <div class="form-group">
@@ -126,166 +92,13 @@
                 </div>
 
                 <div class="form-actions">
-                    <button type="button" class="btn-cancel" id="btnCancel">Cancelar</button>
-                    <button type="submit" class="btn-submit">Compartilhar Dica</button>
+                    <button type="button" class="btn-cancel" id="btnCancel">Cancelar</button>                    <button type="submit" class="btn-submit">Compartilhar Dica</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Modal Tutorial Git -->
-    <div class="modal-overlay" id="tutorialModal" style="display: none;">
-        <div class="modal large-modal">
-            <div class="modal-header">
-                <h3>📚 Tutorial: Contribuindo com Open Source</h3>
-                <button class="modal-close" id="tutorialClose">&times;</button>
-            </div>
-            <div class="tutorial-content">
-                <div class="tutorial-steps">
-                    <div class="step active" data-step="1">
-                        <h4>1️⃣ Fork do Projeto</h4>
-                        <p>Primeiro, vamos fazer um fork deste repositório para sua conta GitHub:</p>
-                        <div class="code-block">
-                            <code>
-                                # 1. Clique em "Fork" no GitHub<br>
-                                # 2. Clone seu fork:<br>
-                                git clone https://github.com/SEU-USUARIO/mural-mfp.git<br>
-                                cd mural-mfp
-                            </code>
-                        </div>
-                    </div>
-                    
-                    <div class="step" data-step="2">
-                        <h4>2️⃣ Criar Branch</h4>
-                        <p>Sempre crie uma branch para suas mudanças:</p>
-                        <div class="code-block">
-                            <code>
-                                # Criar e trocar para nova branch<br>
-                                git checkout -b minha-contribuicao<br><br>
-                                # Verificar branch atual<br>
-                                git branch
-                            </code>
-                        </div>
-                    </div>
-                    
-                    <div class="step" data-step="3">
-                        <h4>3️⃣ Fazer Mudanças</h4>
-                        <p>Adicione sua dica usando o formulário ou editando arquivos:</p>
-                        <div class="code-block">
-                            <code>
-                                # Verificar status das mudanças<br>
-                                git status<br><br>
-                                # Adicionar arquivos modificados<br>
-                                git add .<br><br>
-                                # Fazer commit com mensagem descritiva<br>
-                                git commit -m "Adiciona dica sobre debugging"
-                            </code>
-                        </div>
-                    </div>
-                    
-                    <div class="step" data-step="4">
-                        <h4>4️⃣ Push e Pull Request</h4>
-                        <p>Envie suas mudanças e abra um Pull Request:</p>
-                        <div class="code-block">
-                            <code>
-                                # Enviar para seu fork<br>
-                                git push origin minha-contribuicao<br><br>
-                                # Abra um Pull Request no GitHub<br>
-                                # Compare: base ← seu-fork:minha-contribuicao
-                            </code>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tutorial-navigation">
-                    <button class="btn-prev" id="prevStep" disabled>← Anterior</button>
-                    <span class="step-indicator" id="stepIndicator">1 de 4</span>
-                    <button class="btn-next" id="nextStep">Próximo →</button>
-                </div>
-                
-                <div class="tutorial-tips">
-                    <h4>💡 Dicas Importantes:</h4>
-                    <ul>
-                        <li><strong>Commits descritivos:</strong> Use mensagens claras como "Adiciona dica sobre Git" em vez de "fix"</li>
-                        <li><strong>Uma mudança por vez:</strong> Cada PR deve ter um objetivo específico</li>
-                        <li><strong>Teste antes do commit:</strong> Sempre verifique se o código funciona</li>
-                        <li><strong>Seja respeitosa:</strong> Mantenha um tom colaborativo nas discussões</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Comandos Git -->
-    <div class="modal-overlay" id="commandsModal" style="display: none;">
-        <div class="modal">
-            <div class="modal-header">
-                <h3>📋 Comandos Git Essenciais</h3>
-                <button class="modal-close" id="commandsClose">&times;</button>
-            </div>
-            <div class="commands-content">
-                <div class="command-section">
-                    <h4>🚀 Configuração Inicial</h4>
-                    <div class="code-block">
-                        <code>
-                            git config --global user.name "Seu Nome"<br>
-                            git config --global user.email "seu@email.com"
-                        </code>
-                    </div>
-                </div>
-                
-                <div class="command-section">
-                    <h4>📁 Repositório</h4>
-                    <div class="code-block">
-                        <code>
-                            git clone [url]          # Clonar repositório<br>
-                            git init                 # Inicializar repo local<br>
-                            git remote -v            # Ver repositórios remotos
-                        </code>
-                    </div>
-                </div>
-                
-                <div class="command-section">
-                    <h4>🌿 Branches</h4>
-                    <div class="code-block">
-                        <code>
-                            git branch               # Listar branches<br>
-                            git checkout -b [nome]   # Criar e trocar branch<br>
-                            git checkout [nome]      # Trocar branch<br>
-                            git merge [branch]       # Fazer merge
-                        </code>
-                    </div>
-                </div>
-                
-                <div class="command-section">
-                    <h4>💾 Commits</h4>
-                    <div class="code-block">
-                        <code>
-                            git status               # Ver status dos arquivos<br>
-                            git add .                # Adicionar todos os arquivos<br>
-                            git add [arquivo]        # Adicionar arquivo específico<br>
-                            git commit -m "mensagem" # Fazer commit<br>
-                            git log --oneline        # Ver histórico de commits
-                        </code>
-                    </div>
-                </div>
-                
-                <div class="command-section">
-                    <h4>🔄 Sincronização</h4>
-                    <div class="code-block">
-                        <code>
-                            git push origin [branch] # Enviar mudanças<br>
-                            git pull                 # Baixar mudanças<br>
-                            git fetch                # Buscar mudanças sem merge
-                        </code>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container">
+    <footer class="footer">        <div class="container">
             <p>&copy; 2025 Mural MFP - Feito com 💜 para a Maratona Feminina de Programação</p>
         </div>
     </footer>

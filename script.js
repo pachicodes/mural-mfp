@@ -211,8 +211,7 @@ class MuralMFP {
             </article>
         `;
     }
-    
-    // Obter nome da categoria
+      // Obter nome da categoria
     getCategoryName(category) {
         const categories = {
             'tecnica': 'Técnica',
@@ -298,8 +297,7 @@ class MuralMFP {
     // Adicionar dicas de exemplo (apenas se não houver dicas salvas)
     addSampleTips() {
         if (this.tips.length === 0) {
-            const sampleTips = [
-                {
+            const sampleTips = [                {
                     id: 1,
                     title: "Use printf para debug eficiente",
                     category: "tecnica",
