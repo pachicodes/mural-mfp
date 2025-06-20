@@ -10,10 +10,13 @@ class MuralMFP {
     }
     
     init() {
+        // Remover dicas salvas para sempre mostrar exemplos
+        localStorage.removeItem('mfp-tips');
         this.loadTips();
+        this.addSampleTips();
+        this.applyFilters();
         this.bindEvents();
         this.renderTips();
-        this.addSampleTips();
     }
     
     // Carregar dicas do localStorage
@@ -301,46 +304,36 @@ class MuralMFP {
             const sampleTips = [
                 {
                     id: 1,
-                    title: "Use printf para debug eficiente",
+                    title: "Use console.log para debug rápido",
                     category: "tecnica",
-                    content: "Em vez de usar debuggers complexos, use printf estratégicos para entender o fluxo do seu código. Sempre remova os prints antes de submeter!",
-                    tags: ["debug", "printf", "dica"],
+                    content: "Use console.log() para inspecionar valores em tempo de execução e entender o comportamento do código.",
+                    tags: ["debug", "consolelog"],
                     author: "Ana Paula",
                     date: new Date(now.getTime() - 86400000).toISOString(), // 1 dia atrás
                     dateFormatted: this.formatDate(new Date(now.getTime() - 86400000))
                 },
                 {
                     id: 2,
-                    title: "Gerenciar ansiedade durante a prova",
+                    title: "Faça pausas regulares para manter foco",
                     category: "mindset",
-                    content: "Respire fundo, leia o problema duas vezes antes de começar a implementar. Se travar em um problema, passe para o próximo e volte depois. Tempo é precioso!",
-                    tags: ["ansiedade", "gestao-tempo", "mindset"],
+                    content: "Intervalos curtos a cada 25 minutos ajudam a manter a concentração e a produtividade.",
+                    tags: ["foco", "produtividade"],
                     author: "Beatriz Santos",
                     date: new Date(now.getTime() - 172800000).toISOString(), // 2 dias atrás
                     dateFormatted: this.formatDate(new Date(now.getTime() - 172800000))
                 },
                 {
                     id: 3,
-                    title: "Template para problemas de DP",
+                    title: "Planeje estados antes de codificar",
                     category: "estrategia",
-                    content: "Sempre defina claramente os estados da DP antes de implementar. Escreva a recorrência no papel primeiro. Use memoização inicialmente, depois otimize se necessário.",
-                    tags: ["dp", "programacao-dinamica", "template"],
+                    content: "Em problemas de programação dinâmica, defina claramente os estados e transições antes de implementar.",
+                    tags: ["dp", "planejamento"],
                     author: "Carla Ferreira",
                     date: new Date(now.getTime() - 259200000).toISOString(), // 3 dias atrás
                     dateFormatted: this.formatDate(new Date(now.getTime() - 259200000))
-                },
-                {
-                    id: 4,
-                    title: "Minha primeira MFP",
-                    category: "experiencia",
-                    content: "Na minha primeira MFP eu estava super nervosa, mas o ambiente acolhedor das outras participantes me ajudou muito. Aprendi que não importa quantos problemas você resolve, o importante é participar e aprender!",
-                    tags: ["primeira-vez", "nervosismo", "aprendizado"],
-                    author: "Diana Costa",
-                    date: new Date(now.getTime() - 345600000).toISOString(), // 4 dias atrás
-                    dateFormatted: this.formatDate(new Date(now.getTime() - 345600000))
                 }
             ];
-            
+
             this.tips = sampleTips;
             this.saveTips();
             this.applyFilters();
