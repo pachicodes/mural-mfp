@@ -24,15 +24,6 @@ function applyVisualEffects() {
         '#ffffcc', // amarelo pastel
         '#e6fff2', // verde pastel
         '#e6f7ff', // azul pastel
-        '#ffe6ee', // rosa pastel
-        '#fff0e6', // laranja pastel
-        '#f0f8ff', // azul céu pastel
-        '#ffefd5', // pêssego pastel
-        '#e6ffee', // menta pastel
-        '#ffebf0', // rosa bebê pastel
-        '#f0fff0', // verde honeydew pastel
-        '#ffeee0', // salmão pastel
-        '#fff5f0', // creme pastel
     ];
     
     // Aplicar estilos aleatórios a cada post-it
