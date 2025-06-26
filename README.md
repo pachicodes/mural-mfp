@@ -1,6 +1,6 @@
 # 💜 Mural de Dicas MFP
 
-Um mural colaborativo para a **Maratona Feminina de Programação (MFP)** que exibe dicas no formato de post-its colados em uma parede de cortiça.
+Um mural colaborativo para a **Maratona Feminina de Programação (MFP)** que exibe dicas no formato de post-its.
 
 ## ✨ Sobre o Projeto
 
