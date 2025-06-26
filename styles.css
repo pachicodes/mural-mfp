@@ -46,8 +46,8 @@ body {
     font-family: var(--fonte-principal);
     line-height: 1.6;
     color: var(--cinza-escuro);
-    background: #EDE2F1; /* fundo lilás claro inspirado no logo MFP */
-    background-image: linear-gradient(rgba(185, 103, 219, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(185, 103, 219, 0.05) 1px, transparent 1px);
+    background: #D8C7E3; /* fundo lilás um pouco mais escuro */
+    background-image: linear-gradient(rgba(185, 103, 219, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(185, 103, 219, 0.08) 1px, transparent 1px);
     background-size: 20px 20px; /* tamanho da grade */
     min-height: 100vh;
 }
