@@ -8,7 +8,7 @@ Este projeto cria um mural virtual onde participantes da Maratona Feminina de Pr
 
 - Visual estilo mural de post-its com cores e rotações aleatórias
 - Fácil contribuição através da edição direta do código HTML
-- Layout responsivo que simula dicas em uma parede de cortiça
+- Layout responsivo que simula dicas em uma parede de 
 
 ## 🚀 Como Contribuir
 
