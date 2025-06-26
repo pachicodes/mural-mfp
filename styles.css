@@ -60,7 +60,7 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #E1BEE7 0%, #F5EAF8 70%, #FFE6EE 100%);
+    background:  var(--branco);
     color: var(--roxo-primario);
     padding: var(--espacamento-lg) 0;
     box-shadow: 0 3px 10px rgba(139, 44, 171, 0.15);
@@ -480,15 +480,14 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--roxo-primario);
-    background: linear-gradient(135deg, var(--roxo-primario) 0%, var(--roxo-secundario) 100%);
-    color: var(--branco);
+    background: linear-gradient(135deg, #F5EAF8 0%, #E1BEE7 100%);
+    color: var(--roxo-primario);
     text-align: center;
     padding: var(--espacamento-xl) 0;
     margin-top: var(--espacamento-xxl);
-    border-top: 3px solid var(--rosa-accent);
-    box-shadow: 0 -3px 10px rgba(139, 44, 171, 0.2);
-    font-weight: 400;
+    border-top: 3px solid var(--roxo-secundario);
+    box-shadow: 0 -3px 10px rgba(139, 44, 171, 0.15);
+    font-weight: 500;
     letter-spacing: 0.03em;
 }
 
