@@ -20,8 +20,9 @@
     --preto: #212529;
     
     /* Tipografia */
-    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --fonte-titulo: 'Arial', sans-serif;
+    --fonte-principal: 'Comfortaa', sans-serif;
+    --fonte-titulo: 'Comfortaa', sans-serif;
+    --fonte-postit: 'Indie Flower', cursive;
     
     /* Espaçamentos */
     --espacamento-xs: 0.25rem;
@@ -42,7 +43,7 @@
 }
 
 body {
-    font-family: 'Indie Flower', cursive;
+    font-family: var(--fonte-principal);
     line-height: 1.6;
     color: var(--cinza-escuro);
     background: #EDE2F1; /* fundo lilás claro inspirado no logo MFP */
@@ -59,14 +60,14 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, var(--roxo-primario) 0%, var(--roxo-secundario) 70%, var(--rosa-accent) 100%);
-    color: var(--branco);
+    background: linear-gradient(135deg, #E1BEE7 0%, #F5EAF8 70%, #FFE6EE 100%);
+    color: var(--roxo-primario);
     padding: var(--espacamento-lg) 0;
-    box-shadow: 0 3px 10px rgba(139, 44, 171, 0.2);
+    box-shadow: 0 3px 10px rgba(139, 44, 171, 0.15);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 3px solid var(--rosa-accent);
+    border-bottom: 3px solid var(--roxo-secundario);
 }
 
 .header .container {
@@ -77,6 +78,18 @@ body {
 
 .logo {
     display: flex;
+    align-items: center;
+    gap: var(--espacamento-md);
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    border-radius: var(--border-radius);
+}
+
+.logo-text-container {
+    display: flex;
     flex-direction: column;
     gap: var(--espacamento-xs);
 }
@@ -84,17 +97,16 @@ body {
 .logo-text {
     font-family: var(--fonte-titulo);
     font-size: 2rem;
-    font-weight: bold;
-    background: linear-gradient(45deg, var(--branco), var(--lilas-claro));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-weight: 700;
+    color: var(--roxo-primario);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
 }
 
 .logo-subtitle {
     font-size: 0.9rem;
+    color: var(--roxo-secundario);
+    font-weight: 400;
     opacity: 0.9;
-    font-weight: 300;
 }
 
 .btn-add-tip {
@@ -205,18 +217,21 @@ body {
 /* Feed de dicas */
 .tips-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: var(--espacamento-xxl) var(--espacamento-lg);
+    padding: var(--espacamento-lg);
 }
 
 .tip-card {
     background: #f5eaf8; /* cor clarinha baseada no logo */
     border-radius: var(--border-radius-lg);
     padding: var(--espacamento-xl);
-    box-shadow: 2px 2px 10px rgba(139, 44, 171, 0.15);
+    box-shadow: 3px 3px 10px rgba(139, 44, 171, 0.2);
     transition: all 0.3s ease;
     border-left: 4px solid var(--roxo-secundario);
-    font-family: 'Indie Flower', cursive;
+    letter-spacing: 0.02em;
+    font-family: var(--fonte-principal) !important; /* Forçando a fonte Comfortaa */
+    font-weight: 400;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
     position: relative;
@@ -286,6 +301,9 @@ body {
 .tip-content {
     margin-bottom: var(--espacamento-md);
     line-height: 1.7;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--fonte-principal) !important; /* Garantindo que use Comfortaa */
 }
 
 .tip-tags {
@@ -307,6 +325,8 @@ body {
     font-style: italic;
     color: var(--roxo-secundario);
     font-weight: 500;
+    font-size: 0.9rem;
+    font-family: var(--fonte-postit); /* Mantendo a fonte manuscrita apenas para a assinatura */
 }
 
 /* Estado vazio */
@@ -458,25 +478,6 @@ body {
     transform: translateY(-1px);
 }
 
-/* Estilo Post-it para as dicas */
-.tip-card {
-    background: #fff176; /* amarelo claro */
-    border-radius: var(--border-radius-lg);
-    padding: var(--espacamento-xl);
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    border-left: 4px solid var(--roxo-primario);
-    font-family: 'Indie Flower', cursive;
-    transform: rotate(0deg);
-    transition: transform 0.2s ease;
-}
-
-/* Variedades de cor e rotação */
-.tips-grid > .tip-card:nth-child(4n+1) { background: #fff176; transform: rotate(-3deg); }
-.tips-grid > .tip-card:nth-child(4n+2) { background: #f8bbd0; transform: rotate(2deg); }
-.tips-grid > .tip-card:nth-child(4n+3) { background: #bbdefb; transform: rotate(-1deg); }
-.tips-grid > .tip-card:nth-child(4n+4) { background: #c8e6c9; transform: rotate(4deg); }
-
 /* Footer */
 .footer {
     background: var(--roxo-primario);
@@ -487,6 +488,8 @@ body {
     margin-top: var(--espacamento-xxl);
     border-top: 3px solid var(--rosa-accent);
     box-shadow: 0 -3px 10px rgba(139, 44, 171, 0.2);
+    font-weight: 400;
+    letter-spacing: 0.03em;
 }
 
 /* Responsividade */
@@ -495,6 +498,15 @@ body {
         flex-direction: column;
         gap: var(--espacamento-md);
         text-align: center;
+    }
+    
+    .logo {
+        flex-direction: column;
+        gap: var(--espacamento-sm);
+    }
+    
+    .logo-image {
+        height: 40px;
     }
     
     .logo-text {
