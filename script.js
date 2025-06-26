@@ -19,16 +19,20 @@ function applyVisualEffects() {
     // Obter todos os post-its
     const tipCards = document.querySelectorAll('.tip-card');
     
-    // Cores de post-its para variação (baseadas no logo MFP, mas em tons bem clarinhos)
+    // Cores de post-its para variação (tons pastéis variados)
     const colors = [
-        '#f5eaf8', // roxo primário bem clarinho (baseado no #8B2CAB)
-        '#f8f0fb', // roxo secundário bem clarinho (baseado no #B967DB)
-        '#fcedf2', // rosa accent bem clarinho (baseado no #E91E63)
-        '#f4ebf7', // lilás claro bem clarinho (baseado no #E1BEE7)
-        '#fbf7fd', // lilás quase branco
-        '#f9ecf5', // rosa claro
-        '#eee6f5', // lavanda clarinho
-        '#f9f6fc', // off-white com tom lilás
+        '#ffffcc', // amarelo pastel
+        '#e6fff2', // verde pastel
+        '#e6f7ff', // azul pastel
+        '#ffe6ee', // rosa pastel
+        '#fff0e6', // laranja pastel
+        '#f5eaf8', // lilás pastel (baseado no logo MFP)
+        '#f0f8ff', // azul céu pastel
+        '#ffefd5', // pêssego pastel
+        '#e6ffee', // menta pastel
+        '#ffebf0', // rosa bebê pastel
+        '#f0fff0', // verde honeydew pastel
+        '#ffeee0', // salmão pastel
     ];
     
     // Aplicar estilos aleatórios a cada post-it
