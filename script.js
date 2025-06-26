@@ -19,16 +19,16 @@ function applyVisualEffects() {
     // Obter todos os post-its
     const tipCards = document.querySelectorAll('.tip-card');
     
-    // Cores de post-its para variação
+    // Cores de post-its para variação (todas bem clarinhas)
     const colors = [
-        '#ffff88', // amarelo
-        '#ff7eb9', // rosa
-        '#7afcff', // azul claro
-        '#feff9c', // amarelo claro
-        '#fff740', // amarelo forte
-        '#ff65a3', // rosa médio
-        '#ff7eb9', // rosa claro
-        '#daff8b', // verde claro
+        '#ffffcc', // amarelo bem clarinho
+        '#ffecf5', // rosa bem clarinho
+        '#e6ffff', // azul bem clarinho
+        '#faffd8', // verde bem clarinho
+        '#f2e6ff', // lilás bem clarinho
+        '#fff7e6', // pêssego bem clarinho
+        '#e6fff2', // menta bem clarinho
+        '#f9f9f9', // quase branco
     ];
     
     // Aplicar estilos aleatórios a cada post-it
