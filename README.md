@@ -2,18 +2,20 @@
 
 Um mural colaborativo para a **Maratona Feminina de Programação (MFP)** que exibe dicas no formato de post-its colados em uma parede de cortiça.
 
-## ✨ Funcionalidades
+## ✨ Sobre o Projeto
+
+Este projeto cria um mural virtual onde participantes da Maratona Feminina de Programação podem compartilhar dicas de programação, estratégias e experiências através de post-its coloridos. O objetivo é criar um espaço colaborativo para troca de conhecimentos.
 
 - Visual estilo mural de post-its com cores e rotações aleatórias
-- Template comentado para facilitar contribuições manuais pelo HTML
+- Fácil contribuição através da edição direta do código HTML
 - Layout responsivo que simula dicas em uma parede de cortiça
 
 ## 🚀 Como Contribuir
 
 1. Faça **fork** deste repositório no GitHub.
-2. Abra o seu fork no **GitHub Codespaces**.
-3. No Codespaces, abra `index.html` e localize `<div class="tips-grid">`.
-4. Copie o template comentado, cole abaixo e **adicione sua dica**:
+2. Abra o seu fork no **GitHub Codespaces** ou clone localmente.
+3. No editor, abra `index.html` e localize a seção `<div class="tips-grid">`.
+4. Copie o template comentado, cole abaixo das dicas existentes e **adicione sua dica**:
 
    ```html
    <article class="tip-card">
@@ -31,8 +33,17 @@ Um mural colaborativo para a **Maratona Feminina de Programação (MFP)** que ex
 mural-mfp/
 ├── index.html    # Página principal com mural de post-its
 ├── styles.css    # Estilos de cortiça e post-its
+├── script.js     # JavaScript para efeitos visuais dos post-its
+├── logo.png      # Logo do projeto
 └── README.md     # Documentação do projeto
 ```
+
+## 💡 Ideias para Expansão Futura
+
+- Categorização de dicas por cores
+- Adicionar sistema de "like" nas dicas mais úteis
+- Opção de imprimir o mural para eventos presenciais
+- Versão móvel com interface otimizada
 
 ---
 
